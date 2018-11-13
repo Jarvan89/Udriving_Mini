@@ -1,0 +1,26 @@
+<view class="section">
+
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      出行日期: {{date}}
+    </view>
+  </picker>
+</view>
+<scroll-view scroll-y="true" style="height:100%">
+  <view class="travellist_view" wx:for="{{travellist}}" wx:key="{{index}}">
+    <view class= "travel_view" bindtap="testJump" data-id="{{item.id}}">
+      <view class="travel_title">
+        <text>{{item.title}}   {{item.id}}</text>
+      </view>
+      <view class="travel_route">
+        <text>{{item.from}}{{item.to}}</text>
+      </view>
+      <view class="travel_owner">
+        <text>发起人：{{item.initiator}}</text>
+      </view>
+      <view class="travel_date">
+        <text>出行时间：{{item.date}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
