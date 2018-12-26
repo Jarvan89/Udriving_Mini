@@ -1,0 +1,82 @@
+.travel-item{
+  margin: 15rpx 25rpx 0 25rpx;
+  padding-bottom: 15rpx; 
+  border-bottom: 1rpx solid #D6D7DC;
+}
+.item-header{
+  font-size: 36rpx;
+  line-height: 55rpx;
+}
+
+.header-info view{
+  display: inline;
+}
+.header-info .info-city{
+  font-size: 22rpx;
+  margin-left: 20rpx;
+}
+.header-info .info-distance{
+  font-size: 22rpx;
+  float: right;
+}
+
+.item-body .item-img{
+  position:relative;
+  display: inline-block;
+  width: 200rpx;
+  height: 200rpx;
+}
+.item-img text{
+  position: absolute;
+  right: 0;
+  text-align: center;
+  font-size: 24rpx;
+  background-color: red;
+  color: white;
+  width: 60rpx;
+  border-top-right-radius: 40%;
+  border-bottom-left-radius:40%;
+}
+.item-img image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius:15%;
+
+}
+
+.item-body .body-info{
+  float: left;
+  position: relative;
+  display: block;
+  width: 500rpx;
+}
+
+.body-info .info-detail{
+  line-height: 50rpx;
+}
+.info-detail text{
+  padding: 10rpx 0;
+}
+
+.info-view-count{
+  margin-right: 10rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.info-view-count text{
+  font-size: 22rpx;
+  vertical-align: middle;
+}
+.info-view-count image{
+  margin-left: 6rpx;
+  width:25rpx;
+  height: 25rpx;
+}
+
+.info-detail text{
+  display: block;
+  font-size: 28rpx;
+}
+
+

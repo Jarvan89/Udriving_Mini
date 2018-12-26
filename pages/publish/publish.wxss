@@ -1,0 +1,101 @@
+/* pages/publish/publish.wxss */
+.image {
+  width: 100%;
+  height: 350rpx;
+  border-radius:inherit;
+}
+.page-body-info {
+  margin: 0 auto;
+  flex-direction:column;
+  background-color:#D9D9D9;
+  border: 0rpx;
+  width:100%;
+  display: flex;
+  box-sizing: border-box;
+  height: 350rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius:20rpx;
+}
+
+/* 上传图标样式 */
+.image-plus {
+  width: 150rpx;
+  height: 150rpx;
+  position: relative;
+}
+.image-plus-text{
+  color: #474545;
+  font-size: 28rpx;
+}
+.image-plus-horizontal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #474545;
+  width: 4rpx;
+  height: 80rpx;
+  transform: translate(-50%, -50%);
+}
+.image-plus-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #474545;
+  width: 80rpx;
+  height: 4rpx;
+  transform: translate(-50%, -50%);
+}
+
+input{
+  border: 1rpx solid #D9D9D9;
+  display: inline-block;
+  width: 400rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  padding-left: 15rpx;
+}
+.long-input{
+  width: 580rpx;
+}
+.short-input{
+  width: 200rpx;
+  margin: 0 15rpx;
+}
+textarea{
+  padding: 15rpx;
+  border: 1rpx solid #D9D9D9;
+  display: inline-block;
+  width: 550rpx;
+  height: 300rpx;
+  vertical-align: top;
+  margin-bottom: 20rpx;
+}
+.add-point{
+  margin-left:30rpx; 
+  font-size: 50rpx;
+  font-weight: bolder;
+  line-height: 50rpx;
+}
+
+/* 页面布局 */
+.public-form{
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.form-box{
+  margin-bottom: 15rpx;
+  vertical-align:top;
+}
+.form-box text{
+  display: inline-block;
+  width: 90rpx;
+  height: 60rpx;
+}
+.form-box button{
+  font-size: 24rpx;
+  color: white;
+  width: 200rpx;
+  height:60rpx;
+  background-color: rgb(37, 155, 36);
+}

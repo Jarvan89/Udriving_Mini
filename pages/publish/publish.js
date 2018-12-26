@@ -1,10 +1,13 @@
-// pages/logs/logs.js
+// pages/publish/publish.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    'publishInfo':{
+      'imgList':[
+
+      ],
+      'title':'',
+      '':''
+    }
 
   },
 
@@ -62,5 +65,29 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 上传文件
+  chooseImage() {
+    const self = this
+
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['compressed'],
+      sourceType: ['album'],
+      success(res) {
+        var imageSrc = 'data:image/png;base64,' + wx.getFileSystemManager().readFileSync(res.tempFilePaths[0], "base64");
+        console.log(imageSrc);
+
+        console.log('chooseImage success, temp path is', res.tempFilePaths[0]);
+        self.setData({
+               imageSrc
+               });
+      },
+
+      fail({ errMsg }) {
+        console.log('chooseImage fail, err is', errMsg)
+      }
+    })
   }
 })
+

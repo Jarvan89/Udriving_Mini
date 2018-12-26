@@ -1,26 +1,47 @@
-<view class="section">
-
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+<!-- <view class="section">
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
     <view class="picker">
-      出行日期: {{date}}
+      当前选择: {{date}}
     </view>
   </picker>
-</view>
-<scroll-view scroll-y="true" style="height:100%">
-  <view class="travellist_view" wx:for="{{travellist}}" wx:key="{{index}}">
-    <view class= "travel_view" bindtap="testJump" data-id="{{item.id}}">
-      <view class="travel_title">
-        <text>{{item.title}}   {{item.id}}</text>
+</view> -->
+
+<view class='travel-list'>
+  <block wx:for="{{travellist}}" wx:key="{{index}}">
+    <view class='travel-item' data-id="{{item.id}}" bindtap="toTravelInfo">
+      <view class='item-header'>
+        <view class='header-title'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='header-info'>
+          <view>
+            <text>{{item.from}}</text>——<text>{{item.to}}</text>
+          </view>
+          <view class='info-city'>
+            <text>{{item.toCity}}</text>
+          </view>
+          <view class='info-distance'>
+            <text>{{item.juli}}km</text>
+          </view>
+        </view>
       </view>
-      <view class="travel_route">
-        <text>{{item.from}}{{item.to}}</text>
-      </view>
-      <view class="travel_owner">
-        <text>发起人：{{item.initiator}}</text>
-      </view>
-      <view class="travel_date">
-        <text>出行时间：{{item.date}}</text>
+      <view class='item-body'>
+        <view class='body-info'>
+          <view class='info-detail'>
+            <text>发起：{{item.initiator}}</text>
+            <text>消费：预计{{item.money}}元/人</text>
+            <text>时间：{{item.beginDate}} - {{item.endDate}}</text>
+          </view>
+          <view class='info-view-count'>
+            <text>{{item.viewCount}}</text>
+            <image class='' src='/images/img.png'></image>
+          </view>
+        </view>
+        <view class='item-img'>
+          <text>{{item.days}}日</text>
+          <image class='' src='{{item.imgSrc}}'></image>
+        </view>
       </view>
     </view>
-  </view>
-</scroll-view>
+  </block>
+</view>

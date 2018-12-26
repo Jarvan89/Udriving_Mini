@@ -1,0 +1,63 @@
+<!--pages/travelInfo/travelInfo.wxml-->
+<view class='info'>
+  <view class='info-imgs'>
+    <swiper indicator-dots="1" autoplay="1" indicator-color='rgba(0, 0, 0)'>
+      <block wx:for="{{info.imgUrls}}" wx:key='{{index}}'>
+        <swiper-item>
+          <text>{{info.days}}日</text>
+          <image src="{{item}}" class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='info-detail'>
+    <view>
+      <view class='detail-title title'><text>{{info.title}}</text></view>
+      <view><text>{{info.detail}}</text></view>
+    </view>
+    <view>
+      <view class='title'><text>注意事项：</text></view>
+      <view class='detail-attention'>
+        <block wx:for='{{info.attention}}' wx:key='{{index}}'>
+          <text>{{index+1}}、{{item}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='info-route'>
+    <view class='route-detail'>
+      <view><text>全程1000km</text></view>
+      <view class='route-from-to'>
+        <view><text>集合：{{info.gather}}</text></view>
+        <view><text>终点：{{info.destination}}</text></view>
+      </view>
+    </view>
+    <view class='route-map'>
+      <map show-location='true'></map>
+    </view>
+  </view>
+</view>
+<view class='info-join'>
+  <view class='contact'>
+    <image src='/images/img2.jpeg'></image>
+    <text>联系TA</text>
+  </view>
+  <view class='sign-up' bindtap='wantSignUp'>
+    <text>我要报名</text>
+  </view>
+</view>
+<view class='agreement' style="display:{{showAgreement ? 'block' : 'none'}}">
+    <view class='ag-alert'>
+      <view class='ag-title'><text>自驾协议</text></view>
+      <view><text>自驾游活动的参与者是在自愿参加与退出、风险与责任自负的原则上组成的。</text></view>
+      <view class='ag-content'>
+        <block wx:for='{{agreement}}' wx:key='{{index}}'>
+          <text>{{index+1}}、{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view class='ag-btn'>
+        <button bindtap='agreeStatus' data-status='0' >不同意</button>
+        <button bindtap='agreeStatus' data-status='1'>同意</button>
+    </view>
+</view>

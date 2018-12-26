@@ -1,0 +1,55 @@
+<!--pages/publish/publish.wxml-->
+<view class='public-form'>
+  <view class="form-box page-body-info">
+    <block wx:if="{{imageSrc}}">
+      <image src="{{imageSrc}}" class="image" mode="scaleToFill"></image>
+    </block>
+    <block wx:else>
+      <view class="image-plus image-plus-nb" bindtap="chooseImage">
+        <view class="image-plus-horizontal"></view>
+        <view class="image-plus-vertical"></view>
+      </view>
+      <view class="image-plus-text">选择图片</view>
+    </block>
+  </view>
+  <view class='form-box'>
+    <text>标题：</text>
+    <input class='long-input' placeholder="必填，用一句话吸引，20字以内" />
+  </view>
+  <view class='form-box'>
+    <text>发起：</text>
+    <input class='long-input' placeholder="必填，输入群备注昵称" />
+  </view>
+  <view class='form-box'>
+    <text>集合：</text>
+    <input placeholder="必填，选择具体位置" />
+  </view>
+  <view class='form-box'>
+    <text>途径：</text>
+    <input placeholder="选填，最多可选择十个途径地" />
+    <text class='add-point'> + </text>
+  </view>
+  <view class='form-box'>
+    <text>终点：</text>
+    <input placeholder="必填，选择目的地名称" />
+  </view>
+  <view class='form-box'>
+    <text>时间：</text>
+  </view>
+  <view class='form-box'>
+    <text>消费：</text>
+    预计<input class="short-input" placeholder='吃住+车费' />元/人
+  </view>
+  <view class='form-box'>
+    <text>介绍：</text>
+    <textarea placeholder='选填，150字以内'></textarea>
+  </view>
+  <view class='form-box'>
+    <text>注意：</text>
+    <textarea placeholder='必填，说明衣服、食物、水、帐篷、睡袋、打折证件、相机等出行注意事项！'></textarea>
+  </view>
+  <view class='form-box'>
+    <button>发布</button>
+  </view>
+
+</view>

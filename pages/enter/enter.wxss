@@ -1,0 +1,57 @@
+/* pages/enter/enter.wxss */
+.enter-form{
+  margin: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.form-box{
+  margin: 30rpx auto;
+}
+
+/* 被选中背景色 */
+.chose {
+  background-color: #aaa;
+}
+
+.noShow{
+  display: none;
+}
+
+/* 性别 */
+.box-sex view {
+  padding-top: 20rpx;
+  display: inline-block;
+  width: 100rpx;
+  margin: 0 70rpx;
+}
+.box-sex image{
+  margin: 0 20rpx;
+  width: 60rpx;
+  height: 80rpx;
+}
+
+/* 有车没车 */
+.box-car button{
+  font-size: 26rpx;
+  display: inline-block;
+  width: 200rpx;
+  height: 60rpx;
+  margin: 0 30rpx;
+}
+
+/* 能否搭车 */
+.box-lift picker{
+  width: 210rpx;
+  display: inline-block;
+  margin: 0 20rpx;
+  border: 1rpx solid #aaa;
+  padding: 10rpx;
+}
+
+/* 地址信息 */
+textarea,input {
+  text-align: left;
+  border: 1rpx solid #aaa;
+  width: 100%;
+  overflow: hidden;
+}

@@ -1,27 +1,31 @@
 {
-  "pages":[
-    "pages/travellist/travellist",
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/publish/publish",    
+    "pages/travelList/travelList",    
+    "pages/travelInfo/travelInfo",
+        
+    "pages/enter/enter"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "U自驾",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath":"pages/travellist/travellist",
-      
-      "text": "路线"
-    },{
-      "pagePath": "pages/logs/logs",
-      "text": "我的"
-    },
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "发布路线"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/travelList/travelList",
+        "text": "路线",
+        "iconPath": "/images/i-female.jpg",
+        "selectedIconPath": "/images/i-male.jpg"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布路线",
+        "iconPath": "/images/i-female.jpg",
+        "selectedIconPath": "/images/i-male.jpg"
+      }
+    ]
   }
 }

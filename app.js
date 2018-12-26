@@ -5,13 +5,29 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      success(res) {
+        console.log(res);
+        if (res.code) {
+          //发起网络请求
+          //发送 res.code 到后台换取 openId, sessionKey, unionId
+          // wx.request({
+          //   url: 'http://172.20.10.11:8081/auth/v1/login',
+          //   method:"POST",
+          //   data: {
+          //     code: res.code
+          //   },
+          //   success:function(returnData){
+          //     console.log(returnData);
+          //   }
+          // })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
       }
     })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -33,6 +49,19 @@ App({
       }
     })
   },
+
+  onShow: function () {
+
+  },
+
+  onHide: function () {
+
+  },
+
+  onError: function () {
+
+  },
+
   globalData: {
     userInfo: null
   }

@@ -1,0 +1,38 @@
+<!--pages/enter/enter.wxml-->
+<view class='enter-form'>
+  <view class='form-box box-sex'>
+    <view class='{{enterInfo.sex==0? "chose":""}}' data-id='0' bindtap='choseSex'>
+      <image src='/images/i-male.jpg'></image>
+      <text class='i-male'>小哥哥</text>
+    </view>
+    <view class='{{enterInfo.sex==1? "chose":""}}' data-id='1' bindtap='choseSex'>
+      <image src='/images/i-female.jpg'></image>
+      <text class='i-female'>小姐姐</text>
+    </view>
+  </view>
+  <view class='form-box box-car'>
+    <button class='{{enterInfo.haveCar==1? "chose":""}}' bindtap='choseCar' data-id='1'>有车</button>
+    <button class='{{enterInfo.haveCar==0? "chose":""}}' bindtap='choseCar' data-id='0'>无车</button>
+  </view>
+  <view class='form-box box-lift {{enterInfo.haveCar==1? "":"noShow"}}'>
+    <picker bindchange="liftChange" value='{{index}}' range="{{liftList}}">
+      <view class="picker">
+        {{liftList[enterInfo.lift]}}
+      </view>
+    </picker>
+    <picker bindchange="liftCountChange" value="{{index}}" range="{{liftCountList}}">
+      <view class="picker">
+        {{liftCountList[enterInfo.liftCount]}}
+      </view>
+    </picker>
+  </view>
+  <view class='form-box'>
+    <textarea placeholder="必填，填写我的位置，便于搭车（如地铁站、小区名）" bindblur='inputAddress'></textarea>
+  </view>
+  <view class='form-box'>
+    <input type="text" placeholder='必填，请输入手机号 ' bindblur='inputPhone'/>  
+  </view>
+  <view class='from-box'>
+    <button bindtap='getActiveCode' disabled='{{isPosting==1? true:false}}'>获取活动二维码</button>
+  </view>
+</view>
